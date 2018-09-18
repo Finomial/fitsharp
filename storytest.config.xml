@@ -1,10 +1,16 @@
 <suiteConfig>
 
     <Settings>
-        <inputFolder>document\fitSharp</inputFolder>
+        <inputFolder>document/fitSharp</inputFolder>
         <outputFolder>site</outputFolder>
         <runner>fit.Runner.FolderRunner</runner>
     </Settings>
+
+    <fitSharp.Machine.Application.Settings>
+        <inputFolder>document/fitSharp</inputFolder>
+        <outputFolder>site</outputFolder>
+        <runner>fit.Runner.FolderRunner</runner>
+    </fitSharp.Machine.Application.Settings>
 
     <Fit.FileExclusions>
         <add>^Sample</add>
@@ -21,9 +27,10 @@
         <addNamespace>fitlibrary</addNamespace>
         <addNamespace>fit.Fixtures</addNamespace>
         <addNamespace>fitSharp.Test.Acceptance.Slim</addNamespace>
-        <addAssembly>build\sandbox\fitsharptest.dll</addAssembly>
-        <addAssembly>build\sandbox\fittest.dll</addAssembly>
-        <addAssembly>build\sandbox\samples.dll</addAssembly>
+        <addAssembly>build/sandbox/fit.dll</addAssembly>
+        <addAssembly>build/sandbox/fitSharpTest.dll</addAssembly>
+        <addAssembly>build/sandbox/fitTest.dll</addAssembly>
+        <addAssembly>build/sandbox/Samples.dll</addAssembly>
     </ApplicationUnderTest>
     
     <Culture>

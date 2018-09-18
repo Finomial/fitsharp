@@ -8,3 +8,33 @@ This includes the fit.dll and dbfit*.dll executables.
 
 All original work on this software is covered by the Common Public License. See CPLicense.txt.
 This includes all other executables.
+
+Docker Build & Execute (.NET Core 2) for Windows
+------------------------------------------------
+
+On Windows goto Docker->Settings->Shared Drives and enable sharing of drive C:\ with your containers.
+
+If you get a firewall message, follow the documentation link. To test shared drives, execute the alpine example
+in the Shared Drives dialog box. Until this is working you won't be able to see the test output
+
+If running cmd.exe or PowerShell:
+
+md c:\output
+md c:\output\FitSharp
+
+docker build . -t fitsharp
+
+docker run --rm -v c:/output:/site fitsharp
+
+open c:\output in File Explorer and launch a browser on reportIndex.html
+
+If running git-bash:
+
+mkdir -p /c/output/FitSharp
+
+docker build . -t fitsharp
+
+docker run --rm -v c://output://site fitsharp
+
+
+
